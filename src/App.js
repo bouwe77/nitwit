@@ -9,10 +9,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.assignments = [
-      "Assignment 1",
-      "Assignment 2",
-      "Assignment 3",
-      "Assignment 4"
+      "Assignment 1 - Components",
+      "Assignment 2 - Props",
+      "Assignment 3 - State",
+      "Assignment 4 - Forms"
     ];
     const initialSelectedIndex = this.assignments.length - 1;
     //const initialSelectedIndex = 0;

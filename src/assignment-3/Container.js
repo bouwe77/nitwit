@@ -9,11 +9,11 @@ class Container extends React.Component {
     this.state = {
       timeline: [
         {
-          content: "Cold is a state of mind.",
+          content: "Deze post is afkomstig uit state",
           user: "bouwe"
         },
         {
-          content: "I think I'm constantly in a state of adjustment.",
+          content: "En deze ook",
           user: "bouwe"
         }
       ]

@@ -14,6 +14,8 @@ class Compose extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.props.savePost(this.state.content);
+    this.setState({ content: "" });
   };
 
   render = () => {
@@ -22,7 +24,7 @@ class Compose extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-text">
             <textarea
-              value={this.state.value}
+              value={this.state.content}
               onChange={this.handleChange}
               placeholder="Write something..."
             />

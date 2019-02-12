@@ -8,22 +8,19 @@ class Container extends React.Component {
     super(props);
 
     this.state = {
-      timeline: [
-        {
-          content: "Cold is a state of mind.",
-          user: "bouwe"
-        },
-        {
-          content: "I think I'm constantly in a state of adjustment.",
-          user: "bouwe"
-        }
-      ]
+      timeline: []
     };
   }
 
+  savePost = content => {
+    this.setState(prevState => ({
+      timeline: [{ content: content, user: "bouwe" }, ...prevState.timeline]
+    }));
+  };
+
   render = () => (
     <div className="container">
-      <Compose />
+      <Compose savePost={this.savePost} />
       <Timeline timeline={this.state.timeline} />
     </div>
   );
