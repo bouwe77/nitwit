@@ -1,2 +1,0 @@
-# nitwit
-Created with CodeSandbox
