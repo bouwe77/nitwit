@@ -1,6 +1,7 @@
 import React from "react";
 
 import Timeline from "./Timeline";
+import Compose from "./Compose";
 
 class Container extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Container extends React.Component {
 
   render = () => (
     <div className="container">
+      <Compose />
       <Timeline timeline={this.state.timeline} />
     </div>
   );

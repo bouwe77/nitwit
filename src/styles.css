@@ -43,3 +43,36 @@ body {
   color: #808b96;
   font-style: normal;
 }
+
+.compose {
+  width: 400px;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.form-text {
+  float: left;
+  width: 340px;
+  margin-right: 5px;
+}
+
+textarea {
+  width: 340px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #808b96;
+  resize: none;
+}
+
+.form-button {
+  float: left;
+  vertical-align: middle;
+}
+
+button {
+  width: 50px;
+  height: 52px;
+}

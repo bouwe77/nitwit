@@ -3,11 +3,17 @@ import React from "react";
 import Assignment1 from "./assignment-1/App";
 import Assignment2 from "./assignment-2/App";
 import Assignment3 from "./assignment-3/App";
+import Assignment4 from "./assignment-4/App";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.assignments = ["Assignment 1", "Assignment 2", "Assignment 3"];
+    this.assignments = [
+      "Assignment 1",
+      "Assignment 2",
+      "Assignment 3",
+      "Assignment 4"
+    ];
     const initialSelectedIndex = this.assignments.length - 1;
     //const initialSelectedIndex = 0;
     this.state = { selectedAssignmentIndex: initialSelectedIndex };
@@ -30,6 +36,9 @@ class App extends React.Component {
         break;
       case 2:
         assignmentComponent = <Assignment3 />;
+        break;
+      case 3:
+        assignmentComponent = <Assignment4 />;
         break;
       default:
         assignmentComponent = null;
