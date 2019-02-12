@@ -8,13 +8,17 @@ class Container extends React.Component {
     super(props);
 
     this.state = {
-      timeline: []
+      timeline: [],
+      user: "bouwe"
     };
   }
 
   savePost = content => {
     this.setState(prevState => ({
-      timeline: [{ content: content, user: "bouwe" }, ...prevState.timeline]
+      timeline: [
+        { content: content, user: this.state.user },
+        ...prevState.timeline
+      ]
     }));
   };
 
