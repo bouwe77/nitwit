@@ -1,15 +1,15 @@
 import React from "react";
 
-import Assignment1 from "./assignment-1/components/App";
-import Assignment2 from "./assignment-2/components/App";
+import Assignment1 from "./assignment-1/App";
+import Assignment2 from "./assignment-2/App";
 //import Assignment3 from "./assignment-3/components/App";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.assignments = ["Assignment 1", "Assignment 2"];
-    //const initialSelectedIndex = this.assignments.length - 1;
-    const initialSelectedIndex = 0;
+    const initialSelectedIndex = this.assignments.length - 1;
+    //const initialSelectedIndex = 0;
     this.state = { selectedAssignmentIndex: initialSelectedIndex };
   }
 
