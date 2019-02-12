@@ -3,11 +3,16 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+import Assignments from "./components/Assignments";
+import Assignment1 from "./assignment1/components/App";
+//import Assignment2 from "./assignment2/components/App";
+//import Assignment3 from "./assignment3/components/App";
+
+class App extends React.Component {
+  render = () => (
+    <div>
+      <Assignments />
+      <Assignment1 />
     </div>
   );
 }
