@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eaecee;
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #2c3e50;
+}
+
+.logo {
+  width: 150px;
+}
+
+.assignment {
+  padding-left: 10px;
+}
+
+.timeline {
+  width: 420px;
+}
+
+.post {
+  width: 400px;
+  background: #ffffff;
+  border: 1px solid #eaecee;
+  padding: 10px;
+  margin-bottom: 5px;
+}
