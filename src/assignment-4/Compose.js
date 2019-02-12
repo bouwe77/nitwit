@@ -24,7 +24,7 @@ class Compose extends React.Component {
             <textarea
               value={this.state.value}
               onChange={this.handleChange}
-              placeholder="bla..."
+              placeholder="Write something..."
             />
           </div>
           <div className="form-button">
