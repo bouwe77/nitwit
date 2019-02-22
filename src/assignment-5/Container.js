@@ -7,10 +7,34 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
 
+    this.user = "bouwe";
+
     this.state = {
-      timeline: [],
-      user: "bouwe"
+      isLoaded: false,
+      timeline: []
     };
+  }
+
+  componentDidMount() {
+    fetch("https://nitwit.azurewebsites.com/users/" + this.user + "/timeline")
+      .then(res => res.json())
+      .then(
+        result => {
+          this.setState({
+            isLoaded: true,
+            timeline: result
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        error => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      );
   }
 
   savePost = content => {
@@ -22,14 +46,20 @@ class Container extends React.Component {
     }));
   };
 
-  render = () => (
-    <div className="container">
-      <br /> hier heb ik nog helemaal niks aan gedaan, dit is een kopie van
-      Assignment 4
-      <Compose savePost={this.savePost} />
-      <Timeline timeline={this.state.timeline} />
-    </div>
-  );
+  render = () => {
+    if (this.state.error) {
+      return <div>Error: {this.state.error.message}</div>;
+    } else if (!this.state.isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div className="container">
+          <Compose savePost={this.savePost} />
+          <Timeline timeline={this.state.timeline} />
+        </div>
+      );
+    }
+  };
 }
 
 export default Container;
