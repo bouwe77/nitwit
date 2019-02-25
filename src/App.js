@@ -17,7 +17,7 @@ class App extends React.Component {
       "Assignment 5 - Syncing state with an API"
     ];
     const initialSelectedIndex = this.assignments.length - 1;
-    //const initialSelectedIndex = 0;
+    //const initialSelectedIndex = 3;
     this.state = { selectedAssignmentIndex: initialSelectedIndex };
   }
 
