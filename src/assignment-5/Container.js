@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 import Timeline from "./Timeline";
 import Compose from "./Compose";
@@ -7,7 +8,7 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
 
-    this.user = "bouwe";
+    this.user = "bouwe2";
 
     this.state = {
       isLoaded: false,
@@ -16,25 +17,17 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://nitwit.azurewebsites.com/users/" + this.user + "/timeline")
-      .then(res => res.json())
-      .then(
-        result => {
-          this.setState({
-            isLoaded: true,
-            timeline: result
-          });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      );
+    axios
+      .get(
+        "https://nitwit-api.azurewebsites.net/users/" + this.user + "/timeline"
+      )
+      .then(res => {
+        const timeline = res.data;
+        this.setState({ isLoaded: true, timeline });
+      })
+      .catch(error => {
+        this.setState({ isLoaded: true, error });
+      });
   }
 
   savePost = content => {

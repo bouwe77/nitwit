@@ -6,7 +6,7 @@ const Timeline = props => {
   return (
     <div className="timeline">
       {props.timeline.map(post => (
-        <Post post={post} />
+        <Post key={post.id} post={post} />
       ))}
     </div>
   );
