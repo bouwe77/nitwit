@@ -17,6 +17,10 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
+    this.getTimeline();
+  }
+
+  getTimeline() {
     axios
       .get(`${this.baseUrl}/timeline`)
       .then(res => {
