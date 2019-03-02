@@ -8,7 +8,7 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
 
-    this.user = "bouwe2";
+    this.baseUrl = "https://nitwit-api.azurewebsites.net/users/bouwe";
 
     this.state = {
       isLoaded: false,
@@ -18,9 +18,7 @@ class Container extends React.Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://nitwit-api.azurewebsites.net/users/" + this.user + "/timeline"
-      )
+      .get(`${this.baseUrl}/timeline`)
       .then(res => {
         const timeline = res.data;
         this.setState({ isLoaded: true, timeline });
