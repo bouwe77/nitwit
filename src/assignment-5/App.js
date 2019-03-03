@@ -1,13 +1,13 @@
 import React from "react";
 
 import Header from "./Header";
-import Container from "./Container";
+import TimelineContainer from "./TimelineContainer";
 
 function App() {
   return (
     <div>
       <Header />
-      <Container />
+      <TimelineContainer />
     </div>
   );
 }

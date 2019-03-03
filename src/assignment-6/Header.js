@@ -1,21 +1,35 @@
 import React from "react";
 
-const Header = () => {
-  return (
-    <div>
-      <a href="">
-        <img src="nitwit-logo.png" alt="nitwit" className="logo" />
-      </a>
-      <ul className="nav">
-        <li>
-          <a href="#">timeline</a>
-        </li>
-        <li>
-          <a href="#">following</a>
-        </li>
-      </ul>
-    </div>
-  );
-};
+export default class Header extends React.Component {
+  timelineClick = event => {
+    event.preventDefault();
+    this.props.renderTimeline();
+  };
 
-export default Header;
+  followingClick = event => {
+    event.preventDefault();
+    this.props.renderFollowing();
+  };
+
+  render = () => {
+    return (
+      <div>
+        <a href="">
+          <img src="nitwit-logo.png" alt="nitwit" className="logo" />
+        </a>
+        <ul className="nav">
+          <li>
+            <a href="" onClick={this.timelineClick}>
+              timeline
+            </a>
+          </li>
+          <li>
+            <a href="" onClick={this.followingClick}>
+              following
+            </a>
+          </li>
+        </ul>
+      </div>
+    );
+  };
+}
