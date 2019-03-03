@@ -1,11 +1,6 @@
 import React from "react";
 
-import Assignment1 from "./assignment-1/App";
-import Assignment2 from "./assignment-2/App";
-import Assignment3 from "./assignment-3/App";
-import Assignment4 from "./assignment-4/App";
-import Assignment5 from "./assignment-5/App";
-import Assignment6 from "./assignment-6/App";
+import Assignment from "./Assignment";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,31 +25,6 @@ class App extends React.Component {
   };
 
   render = () => {
-    let assignmentComponent;
-    switch (this.state.selectedAssignmentIndex) {
-      case 0:
-        assignmentComponent = <Assignment1 />;
-        break;
-      case 1:
-        assignmentComponent = <Assignment2 />;
-        break;
-      case 2:
-        assignmentComponent = <Assignment3 />;
-        break;
-      case 3:
-        assignmentComponent = <Assignment4 />;
-        break;
-      case 4:
-        assignmentComponent = <Assignment5 />;
-        break;
-      case 5:
-        assignmentComponent = <Assignment6 />;
-        break;
-      default:
-        assignmentComponent = null;
-        break;
-    }
-
     return (
       <div>
         <div className="header">
@@ -70,7 +40,7 @@ class App extends React.Component {
           </select>
         </div>
 
-        <div className="assignment">{assignmentComponent}</div>
+        <Assignment nr={this.state.selectedAssignmentIndex + 1} />
       </div>
     );
   };
