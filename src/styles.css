@@ -81,3 +81,14 @@ button {
   border: 1px solid #808b96;
   background: #eaecee;
 }
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline;
+  padding: 8px;
+}

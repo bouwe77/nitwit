@@ -6,6 +6,14 @@ const Header = () => {
       <a href="">
         <img src="nitwit-logo.png" alt="nitwit" className="logo" />
       </a>
+      <ul className="nav">
+        <li>
+          <a href="#">timeline</a>
+        </li>
+        <li>
+          <a href="#">following</a>
+        </li>
+      </ul>
     </div>
   );
 };

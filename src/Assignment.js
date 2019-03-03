@@ -17,7 +17,11 @@ const Assignment = props => {
     Assignment6
   ];
   const SelectedAssignment = assignments[props.selectedAssignmentIndex];
-  return <SelectedAssignment />;
+  return (
+    <div className="assignment">
+      <SelectedAssignment />
+    </div>
+  );
 };
 
 export default Assignment;

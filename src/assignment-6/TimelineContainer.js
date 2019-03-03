@@ -4,7 +4,7 @@ import axios from "axios";
 import Timeline from "./Timeline";
 import Compose from "./Compose";
 
-class Container extends React.Component {
+class TimelineContainer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -64,4 +64,4 @@ class Container extends React.Component {
   };
 }
 
-export default Container;
+export default TimelineContainer;
