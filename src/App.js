@@ -5,6 +5,7 @@ import Assignment2 from "./assignment-2/App";
 import Assignment3 from "./assignment-3/App";
 import Assignment4 from "./assignment-4/App";
 import Assignment5 from "./assignment-5/App";
+import Assignment6 from "./assignment-6/App";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class App extends React.Component {
       "Assignment 2 - Props",
       "Assignment 3 - State",
       "Assignment 4 - Events and Forms",
-      "Assignment 5 - Syncing state with an API"
+      "Assignment 5 - Syncing state with an API",
+      "Assignment 6 - Follow users"
     ];
     const initialSelectedIndex = this.assignments.length - 1;
     //const initialSelectedIndex = 3;
@@ -44,6 +46,9 @@ class App extends React.Component {
         break;
       case 4:
         assignmentComponent = <Assignment5 />;
+        break;
+      case 5:
+        assignmentComponent = <Assignment6 />;
         break;
       default:
         assignmentComponent = null;
