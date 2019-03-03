@@ -2,7 +2,7 @@ import React from "react";
 
 import Timeline from "./Timeline";
 
-class Container extends React.Component {
+class TimelineContainer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,4 +27,4 @@ class Container extends React.Component {
   );
 }
 
-export default Container;
+export default TimelineContainer;
