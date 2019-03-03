@@ -1,20 +1,13 @@
 import React from "react";
 
+import Header from "./Header";
 import Assignment from "./Assignment";
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.assignments = [
-      "Assignment 1 - Components",
-      "Assignment 2 - Props",
-      "Assignment 3 - State",
-      "Assignment 4 - Events and Forms",
-      "Assignment 5 - Syncing state with an API",
-      "Assignment 6 - Follow users"
-    ];
-    const initialSelectedIndex = this.assignments.length - 1;
-    //const initialSelectedIndex = 3;
+
+    const initialSelectedIndex = 5;
     this.state = { selectedAssignmentIndex: initialSelectedIndex };
   }
 
@@ -27,23 +20,14 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
-        <div className="header">
-          <select
-            value={this.state.selectedAssignmentIndex}
-            onChange={this.handleChange}
-          >
-            {this.assignments.map((assignment, index) => (
-              <option key={index} value={index}>
-                {assignment}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <Assignment index={this.state.selectedAssignmentIndex} />
+        <Header
+          selectedAssignmentIndex={this.state.selectedAssignmentIndex}
+          handleChange={this.handleChange}
+        />
+        <Assignment
+          selectedAssignmentIndex={this.state.selectedAssignmentIndex}
+        />
       </div>
     );
   };
 }
-
-export default App;

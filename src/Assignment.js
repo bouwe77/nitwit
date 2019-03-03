@@ -16,9 +16,8 @@ const Assignment = props => {
     Assignment5,
     Assignment6
   ];
-  const TagName = assignments[props.index];
-  console.log(TagName);
-  return <TagName />;
+  const SelectedAssignment = assignments[props.selectedAssignmentIndex];
+  return <SelectedAssignment />;
 };
 
 export default Assignment;
