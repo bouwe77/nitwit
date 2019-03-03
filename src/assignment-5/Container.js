@@ -8,7 +8,8 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
 
-    this.baseUrl = "https://nitwit-api.azurewebsites.net/users/bouwe";
+    this.user = "bouwe";
+    this.baseUrl = `https://nitwit-api.azurewebsites.net/users/${this.user}`;
 
     this.state = {
       isLoaded: false,
@@ -33,12 +34,18 @@ class Container extends React.Component {
   }
 
   savePost = content => {
-    this.setState(prevState => ({
-      timeline: [
-        { content: content, user: this.state.user },
-        ...prevState.timeline
-      ]
-    }));
+    const previousTimeline = this.state.timeline;
+    const newPost = { post: content, user: this.user };
+    axios
+      .post(`${this.baseUrl}/posts`, newPost)
+      .then(res => {
+        this.setState(prevState => ({
+          timeline: [newPost, ...prevState.timeline]
+        }));
+      })
+      .catch(error => {
+        this.setState({ timeline: previousTimeline, error });
+      });
   };
 
   render = () => {

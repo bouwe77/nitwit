@@ -5,8 +5,8 @@ import Post from "./Post";
 const Timeline = props => {
   return (
     <div className="timeline">
-      {props.timeline.map(post => (
-        <Post key={post.id} post={post} />
+      {props.timeline.map((post, index) => (
+        <Post key={index} post={post} />
       ))}
     </div>
   );
