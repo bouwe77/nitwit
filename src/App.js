@@ -40,7 +40,7 @@ class App extends React.Component {
           </select>
         </div>
 
-        <Assignment nr={this.state.selectedAssignmentIndex + 1} />
+        <Assignment index={this.state.selectedAssignmentIndex} />
       </div>
     );
   };
