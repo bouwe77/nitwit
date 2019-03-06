@@ -1,13 +1,13 @@
 import React from "react";
 
 import Header from "./Header";
-import TimelineContainer from "./TimelineContainer";
-import FollowingContainer from "./FollowingContainer";
+import TimelineContainer from "./timeline/TimelineContainer";
+import FollowingContainer from "./following/FollowingContainer";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { renderFollowing: false };
+    this.state = { renderFollowing: true };
   }
 
   renderTimeline = () => {
