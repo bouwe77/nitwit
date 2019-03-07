@@ -1,7 +1,16 @@
 import React from "react";
 
 const User = props => {
-  return <div>{props.user.name}</div>;
+  var { user, youAreFollowing, isFollowingYou } = props.user;
+
+  var followOrUnfollow = youAreFollowing ? "ja" : "nee";
+  var followsYou = isFollowingYou ? "is following you" : "";
+
+  return (
+    <div>
+      {user} {followOrUnfollow} <i>{followsYou}</i>
+    </div>
+  );
 };
 
 export default User;

@@ -6,7 +6,7 @@ const Following = props => {
   return (
     <div>
       {props.users.map(user => (
-        <User key={user.id} user={user} />
+        <User key={user.name} user={user} />
       ))}
     </div>
   );
