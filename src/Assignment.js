@@ -13,8 +13,8 @@ const Assignment = props => {
     Assignment2,
     Assignment3,
     Assignment4,
-    Assignment5,
-    Assignment6
+    Assignment5
+    //Assignment6
   ];
   const SelectedAssignment = assignments[props.selectedAssignmentIndex];
   return (

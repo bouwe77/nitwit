@@ -6,8 +6,8 @@ const Header = props => {
     "Assignment 2 - Props",
     "Assignment 3 - State",
     "Assignment 4 - Events and Forms",
-    "Assignment 5 - Syncing state with an API",
-    "Assignment 6 - Follow users"
+    "Assignment 5 - Syncing state with an API"
+    //"Assignment 6 - Follow users"
   ];
 
   return (

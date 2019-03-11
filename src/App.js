@@ -7,7 +7,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    const initialSelectedIndex = 5;
+    const initialSelectedIndex = 4;
     this.state = { selectedAssignmentIndex: initialSelectedIndex };
   }
 
